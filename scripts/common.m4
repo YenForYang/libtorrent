@@ -12,7 +12,7 @@ AC_DEFUN([TORRENT_WITH_SYSROOT], [
         AC_MSG_ERROR(The sysroot option must point to a directory, like f.ex "/Developer/SDKs/MacOSX10.4u.sdk".)
       else
         AC_MSG_RESULT($withval)
-        
+
         CXXFLAGS="$CXXFLAGS -isysroot $withval"
         LDFLAGS="$LDFLAGS -Wl,-syslibroot,$withval"
       fi
